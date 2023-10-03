@@ -13,34 +13,57 @@ struct ContentView: View {
     
     @State private var screenTapped: Bool = false
     
-    @State private var offsetY: CGFloat = -1000.0
+    let rotationAngle: CGFloat = 360.0
     
     var body: some View {
         ZStack {
+            Spacer()
             // Background color
             LinearGradient(colors: screenTapped ? colorList1 : colorList2, startPoint: .topLeading, endPoint: .bottomTrailing)
             .opacity(0.8)
             .ignoresSafeArea()
             // Text
-            Text("SwiftUI Basics")
-                    .font(.largeTitle)
+            VStack(spacing: 0) {
+                
+                Spacer()
+                
+            Text(screenTapped ? "The Basics of Swift UI" : "To know what you know and what you do not know, that is true knowledge")
+                .font(screenTapped ? .largeTitle : .title)
                     .fontWeight(.semibold)
-                .foregroundColor(.black)
-                .offset(y: offsetY)
+                .foregroundColor(.red)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+                .rotation3DEffect(
+                    .degrees(screenTapped ? .zero : rotationAngle),
+                                          axis: (x: 1.0, y: 1.0, z: 1.0)
+                )
+                
+                Spacer()
+                
+            Text("Another line of text")
+                .font(screenTapped ? .largeTitle : .title)
+                    .fontWeight(.semibold)
+                    .foregroundColor(screenTapped ? .blue : .white)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+                .rotation3DEffect(
+                    .degrees(screenTapped ? .zero : rotationAngle),
+                                          axis: (x: 1.0, y: 1.0, z: 1.0)
+                )
+                
+                Spacer()
+                
+            }
         }
         .onTapGesture {
             // Change screen color if tapped
-            screenTapped.toggle()
-            withAnimation(.easeIn(duration: 1)) {
-                if screenTapped {
-                    offsetY = -1000
-                } else {
-                    offsetY = 0
-                }
+            withAnimation {
+                screenTapped.toggle()
+            }
             }
         }
     }
-}
+
 
 #Preview {
     ContentView()
