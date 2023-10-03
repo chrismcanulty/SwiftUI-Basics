@@ -13,6 +13,8 @@ struct ContentView: View {
     
     @State private var screenTapped: Bool = false
     
+    @State var toggleFont: Bool = false
+    
     let rotationAngle: CGFloat = 360.0
     
     var body: some View {
@@ -50,6 +52,22 @@ struct ContentView: View {
                     .degrees(screenTapped ? .zero : rotationAngle),
                                           axis: (x: 1.0, y: 1.0, z: 1.0)
                 )
+                
+                Spacer()
+                
+                Text("Hello world")
+                    .font(toggleFont ? .caption : .largeTitle)
+                    .fontWeight(.bold)
+                
+                Button(action: {
+                    withAnimation {
+                        toggleFont.toggle()
+                    }
+                }, label: {
+                    Text("Click me")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                })
                 
                 Spacer()
                 
