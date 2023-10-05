@@ -71,6 +71,10 @@ struct ContentView: View {
                 
                 Spacer()
                 
+                GridView()
+                
+                Spacer()
+                
             }
         }
         .onTapGesture {

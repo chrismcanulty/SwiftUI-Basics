@@ -11,6 +11,8 @@
 		B033EF4C2AC938FC00525FAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B033EF4B2AC938FC00525FAF /* ContentView.swift */; };
 		B033EF4E2AC938FD00525FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B033EF4D2AC938FD00525FAF /* Assets.xcassets */; };
 		B033EF522AC938FD00525FAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B033EF512AC938FD00525FAF /* Preview Assets.xcassets */; };
+		B033EF592ACE4AB200525FAF /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B033EF582ACE4AB200525FAF /* GridView.swift */; };
+		B033EF5B2ACE4CE100525FAF /* GridTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B033EF5A2ACE4CE100525FAF /* GridTwoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		B033EF4D2AC938FD00525FAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B033EF4F2AC938FD00525FAF /* SwiftUI_Basics.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUI_Basics.entitlements; sourceTree = "<group>"; };
 		B033EF512AC938FD00525FAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B033EF582ACE4AB200525FAF /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		B033EF5A2ACE4CE100525FAF /* GridTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTwoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				B033EF4D2AC938FD00525FAF /* Assets.xcassets */,
 				B033EF4F2AC938FD00525FAF /* SwiftUI_Basics.entitlements */,
 				B033EF502AC938FD00525FAF /* Preview Content */,
+				B033EF582ACE4AB200525FAF /* GridView.swift */,
+				B033EF5A2ACE4CE100525FAF /* GridTwoView.swift */,
 			);
 			path = "SwiftUI Basics";
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B033EF4C2AC938FC00525FAF /* ContentView.swift in Sources */,
+				B033EF592ACE4AB200525FAF /* GridView.swift in Sources */,
 				B033EF4A2AC938FC00525FAF /* SwiftUI_BasicsApp.swift in Sources */,
+				B033EF5B2ACE4CE100525FAF /* GridTwoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
